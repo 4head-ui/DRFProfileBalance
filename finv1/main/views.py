@@ -3,7 +3,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework import permissions, viewsets
 from rest_framework import status,generics,views
 from rest_framework.authtoken.models import Token
-from rest_framework.response import Response #аналог джсон респонс
+from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.decorators import permission_classes,authentication_classes
 from rest_framework.permissions import IsAuthenticated
