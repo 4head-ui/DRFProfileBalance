@@ -5,4 +5,4 @@
 <h6>Finance movement from balance to cost categories</h6>
 <img src = 'scr2.png'>
 <h6>All finance takes list(release takes in profile and out of profile)</h6>
-<img src = 'scr2.png'>
+<img src = 'scr3.png'>
