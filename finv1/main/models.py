@@ -18,7 +18,7 @@ class Amounttake(models.Model):
     description = models.TextField(verbose_name='Описание')
     name_of_category = models.CharField(max_length=30,verbose_name='Имя категории',
                                          blank=True,null=True)
-    user = models.ForeignKey(FinUser,on_delete=models.PROTECT,to_field='username',
+    user = models.ForeignKey(FinUser,on_delete=models.CASCADE,to_field='username',
                              blank=True,null=True,verbose_name='Пользователь')
 
     class Meta:
