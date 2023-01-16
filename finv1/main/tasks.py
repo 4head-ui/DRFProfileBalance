@@ -19,7 +19,7 @@ def send():
                                             f'{user.account_balance}Руб.\n'
                                             f'Баланс на ваших статьях затрат:'
                                             f'{categories(user.username)}',
-                                            'westsouthnothern@gmail.com', (user.email,))
+                                            '*******************', (user.email,))
 
 
 
