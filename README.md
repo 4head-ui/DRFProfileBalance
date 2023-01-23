@@ -3,7 +3,7 @@
 <h6>Realize in project(Celery,TokenAuth,Plotly),all instances CRUD</h6>
 <h6>Profile realization</h6>
 <img src = 'scr.png'>
-<h6>Finance movement from balance to cost categories</h6>
+<h6>Finance movement from balance to categories</h6>
 <img src = 'scr2.png'>
 <h6>All finance takes list(realize receive takes from profile and not from profile)</h6>
 <img src = 'scr3.png'>
