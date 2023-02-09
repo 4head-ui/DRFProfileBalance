@@ -258,3 +258,22 @@ def stat(request):
     statistica = fig.show()
     return Response(statistica)
 
+
+#статистика на основе chart.js
+@login_required
+def js_stat(request):
+    category_values = []
+    category_names = []
+    v = Category.objects.filter(user=request.user).values_list('category_amount')
+    for x in v:
+        for i in x:
+            category_values.append(i)
+    c = Category.objects.filter(user=request.user).values_list('category_name')
+    for x in c:
+        for i in x:
+            category_names.append(i)
+    context = {'category_values': category_values,
+               'category_names': category_names}
+    return render(request,'main/basic.html',context)
+
+
