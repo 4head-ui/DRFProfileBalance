@@ -238,7 +238,8 @@ def amount_categories(request):
             return Response(CISserializer.data, status=status.HTTP_201_CREATED)
         return Response(CISserializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+    
+#stat with plotly usage
 @permission_classes([IsAuthenticated,])
 @authentication_classes((TokenAuthentication,))
 @api_view(["GET"])
