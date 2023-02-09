@@ -1,0 +1,52 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Этот метатег необходим для работы Bootstrap -->
+        <title>{% block title %}Главная{% endblock %} - Доска объявлений</title>
+        {% bootstrap_css %}
+        <!-- Привязка к таблице стилей Bootstrap -->
+        <!-- в css будут специфичные для сайта стили -->
+        {% bootstrap_javascript jquery='slim' %}
+        <!-- Привязываем файлы веб-сценариев с программным кодом Bootstrap. также привязываем сокращенную редакцию
+        библиотеки jQuery, без которой не заработает созданное нами раскрывающееся меню (AJAX и анимация
+        использоваться не будет - поэтому полная редакция jQuery не нужна -->
+    </head>
+    <body class="container-fluid">
+        <header class="mb-4">
+            <h1 class="display-1 text-center">Ваша статистика</h1>
+        </header>
+            {% block content %}
+            {% endblock %}
+            {% bootstrap_messages %}
+    <footer class="mt-3">
+        <p class="text-right font-italic"></p>
+    </footer>
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+<script>
+var values = {{ category_values }};
+var labels = {{ category_names | safe }};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'рублей',
+        data: values,
+        borderWidth: 1
+      }]
+    },
+  });
+</script>
+    </body>
