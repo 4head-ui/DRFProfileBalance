@@ -245,11 +245,11 @@ def amount_categories(request):
 def stat(request):
     category_values = []
     category_names = []
-    v = Category.objects.values_list('category_amount')
+    v = Category.objects.filter(user=request.user).values_list('category_amount')
     for x in v:
         for i in x:
             category_values.append(i)
-    c = Category.objects.values_list('category_name')
+    c = Category.objects.filter(user=request.user).values_list('category_name')
     for x in c:
         for i in x:
             category_names.append(i)
