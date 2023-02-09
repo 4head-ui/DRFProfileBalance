@@ -3,7 +3,7 @@ from django.urls import path
 from .views import UserProfileAPI,LoginView,\
   User_logout,categories,amounttake,nobody_amounttake,RegisterUserAPIView,\
   amount_categories,api_amounttake_detail,api_category_detail,TakesViewSet,\
-  stat
+  stat,js_stat
 
 app_name = 'main'
 
@@ -20,7 +20,7 @@ urlpatterns = [
   path('profile/amounttake/', amounttake),#добавление нового пополнения счета
   path('profile/alltakes',TakesViewSet.as_view({'get': 'list'})),
   path('profile/stat',stat),#статистика на основе плотли
-  #все поступления с фильтрами
+  path('profile/js_stat',js_stat,name='js_stat'),
   path('profile/amounttake/<int:pk>/',api_amounttake_detail),
   path('profile/', UserProfileAPI.as_view()),
 
