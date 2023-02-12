@@ -5,15 +5,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Этот метатег необходим для работы Bootstrap -->
         <title>{% block title %}Главная{% endblock %} - Доска объявлений</title>
         {% bootstrap_css %}
-        <!-- Привязка к таблице стилей Bootstrap -->
-        <!-- в css будут специфичные для сайта стили -->
         {% bootstrap_javascript jquery='slim' %}
-        <!-- Привязываем файлы веб-сценариев с программным кодом Bootstrap. также привязываем сокращенную редакцию
-        библиотеки jQuery, без которой не заработает созданное нами раскрывающееся меню (AJAX и анимация
-        использоваться не будет - поэтому полная редакция jQuery не нужна -->
     </head>
     <body class="container-fluid">
         <header class="mb-4">
