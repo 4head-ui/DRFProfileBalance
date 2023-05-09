@@ -227,7 +227,7 @@ def amount_categories(request):
                 qs_balance = FinUser.objects.filter(username=request.user).values_list('account_balance')
                 for now_balance in qs_balance[0]:
                     pass
-                if now_balance == 0 or now_balance < z:
+                if now_balance <= 0 or now_balance < z:
                     return Response('Недостаточно средств для перевода на категорию')
                 else:
                     FinUser.objects.filter(username=request.user).update(
