@@ -1,4 +1,4 @@
-<h3>DRF project based on Test task</h3>
+<h3>DRF project based on freelancer task</h3>
 <h5>DRF web api balance manager.</h5>
 <h6>Realize in project(Celery,TokenAuth,Plotly,Chart.js)CRUD</h6>
 <h6>Profile realization</h6>
